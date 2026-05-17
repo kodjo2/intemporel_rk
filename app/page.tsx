@@ -41,7 +41,7 @@ export default function HomePage() {
         className="container-luxe scroll-mt-28 py-10 md:py-14"
       >
         <AnimatedSection>
-          <div className="flex items-end justify-between gap-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
                 Galerie modele
@@ -52,15 +52,22 @@ export default function HomePage() {
             </div>
             <Link
               href="/gallery"
-              className="focus-ring hidden min-h-11 items-center rounded-full border border-border/70 px-5 text-sm font-semibold transition hover:border-accent hover:text-accent sm:inline-flex"
+              className="focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-border/70 px-5 text-sm font-semibold transition hover:border-accent hover:text-accent sm:self-auto"
             >
               Ouvrir la galerie
             </Link>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 md:hidden">
             <GalleryShowcase
               items={galleryItems}
-              limit={9}
+              limit={2}
+              showFilters={false}
+            />
+          </div>
+          <div className="mt-8 hidden md:block">
+            <GalleryShowcase
+              items={galleryItems}
+              limit={4}
               showFilters={false}
             />
           </div>
