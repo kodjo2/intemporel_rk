@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Host
+Host: https://romarice-couture.vercel.app
+
+# Sitemaps
+Sitemap: https://romarice-couture.vercel.app/sitemap.xml
