@@ -13,7 +13,7 @@ type TestimonialsCarouselProps = {
 export function TestimonialsCarousel({ items }: TestimonialsCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const reduceMotion = useReducedMotion();
-  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const cardRefs = useRef<Array<HTMLElement | null>>([]);
 
   useEffect(() => {
     const activeCard = cardRefs.current[activeIndex];
