@@ -10,6 +10,7 @@ export const siteConfig = {
   ogImage: "/images/hero-couture.jpeg",
   nav: [
     { href: "/#home", label: "Accueil", sectionId: "home" },
+    { href: "/#gallery", label: "Galerie", sectionId: "gallery" },
     { href: "/#about", label: "A propos", sectionId: "about" },
     {
       href: "/#collections",
@@ -17,7 +18,6 @@ export const siteConfig = {
       sectionId: "collections",
     },
     { href: "/#services", label: "Services", sectionId: "services" },
-    { href: "/#gallery", label: "Galerie", sectionId: "gallery" },
     {
       href: "/#testimonials",
       label: "Temoignages",

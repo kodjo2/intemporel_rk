@@ -97,15 +97,11 @@ export function TestimonialsCarousel({ items }: TestimonialsCarouselProps) {
           const reviewImage = reviewImages[index % reviewImages.length];
 
           return (
-            <motion.article
+            <article
               key={item.name}
               ref={(element) => {
                 cardRefs.current[index] = element;
               }}
-              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className={[
                 "w-[72%] max-w-full shrink-0 snap-center rounded-[1.4rem] border p-3.5 sm:w-[15rem] sm:p-4",
                 active
@@ -157,7 +153,7 @@ export function TestimonialsCarousel({ items }: TestimonialsCarouselProps) {
                   </div>
                 </div>
               </div>
-            </motion.article>
+            </article>
           );
         })}
       </div>

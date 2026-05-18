@@ -41,14 +41,33 @@ export default function HomePage() {
       />
 
       <section id="home" className="scroll-mt-28">
-        <HeroSection />
+        <HeroSection>
+          <div
+            id="gallery"
+            className="space-y-6 rounded-[2rem] border border-border/60 bg-card/75 p-5 shadow-lg sm:p-6"
+          >
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <SectionHeading
+                eyebrow="Catalogue filtre"
+                title="Filtrer les modeles par statut pour aller vite vers la bonne piece."
+              />
+              <Link
+                href="/collections"
+                className="focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-border/70 bg-background/80 px-5 text-sm font-medium transition hover:border-accent hover:text-accent lg:self-start"
+              >
+                Catalogue
+              </Link>
+            </div>
+            <GalleryShowcase items={galleryItems} />
+          </div>
+        </HeroSection>
       </section>
 
       <section
         id="about"
         className="container-luxe scroll-mt-28 py-10 md:py-16"
       >
-        <AnimatedSection>
+        <AnimatedSection animate={false}>
           <div className="space-y-8">
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeading
@@ -74,7 +93,11 @@ export default function HomePage() {
 
             <div className="grid gap-5 lg:grid-cols-3">
               {showcasedGarments.map((garment, index) => (
-                <AnimatedSection key={garment.title} delay={index * 0.04}>
+                <AnimatedSection
+                  key={garment.title}
+                  delay={index * 0.04}
+                  animate={false}
+                >
                   <article className="overflow-hidden rounded-[2rem] border border-border/60 bg-card/80 shadow-lg">
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image
@@ -131,11 +154,8 @@ export default function HomePage() {
         </AnimatedSection>
       </section>
 
-      <section
-        id="gallery"
-        className="container-luxe scroll-mt-28 py-8 md:py-14"
-      >
-        <AnimatedSection>
+      <section className="container-luxe py-8 md:py-14">
+        <AnimatedSection animate={false}>
           <div className="grid gap-6 rounded-[2.25rem] border border-border/60 bg-[linear-gradient(135deg,rgba(14,14,14,0.98),rgba(38,31,24,0.96)_58%,rgba(14,14,14,0.98))] px-6 py-7 text-white shadow-[0_30px_120px_rgba(0,0,0,0.22)] sm:px-8 sm:py-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#f4d28b]">
@@ -169,7 +189,7 @@ export default function HomePage() {
 
       <section className="container-luxe py-12 md:py-20">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <AnimatedSection>
+          <AnimatedSection animate={false}>
             <div className="overflow-hidden rounded-[2.25rem] border border-border/60 bg-card/85 shadow-lg">
               <div className="grid gap-4 p-4 sm:grid-cols-[0.72fr_0.28fr] sm:p-5">
                 <div className="relative overflow-hidden rounded-[1.75rem]">
@@ -205,7 +225,7 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.08}>
+          <AnimatedSection delay={0.08} animate={false}>
             <div className="glass-panel rounded-[2.25rem] p-6 sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent">
                 Produit signature
@@ -304,23 +324,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-luxe py-12 md:py-18">
-        <SectionHeading
-          eyebrow="Catalogue filtre"
-          title="Filtrer les modeles par statut pour aller vite vers la bonne piece."
-        />
-        <div className="mt-8">
-          <GalleryShowcase items={galleryItems} />
-        </div>
-      </section>
-
       <section
         id="services"
         className="container-luxe scroll-mt-28 py-12 md:py-18"
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
-            <AnimatedSection key={service.title} delay={index * 0.05}>
+            <AnimatedSection
+              key={service.title}
+              delay={index * 0.05}
+              animate={false}
+            >
               <article className="glass-panel rounded-[1.75rem] p-5 sm:p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
                   Service {index + 1}
@@ -349,7 +363,11 @@ export default function HomePage() {
       <section className="container-luxe py-12 md:py-20">
         <div className="grid gap-5 lg:grid-cols-3">
           {collections.map((collection, index) => (
-            <AnimatedSection key={collection.slug} delay={index * 0.05}>
+            <AnimatedSection
+              key={collection.slug}
+              delay={index * 0.05}
+              animate={false}
+            >
               <article className="overflow-hidden rounded-[2rem] border border-border/60 bg-card/80 shadow-lg">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
@@ -424,7 +442,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

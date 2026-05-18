@@ -193,15 +193,6 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="hidden rounded-full border border-border/70 bg-background/80 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground xl:block">
-              Reponse sous 24h
-            </div>
-            <Link
-              href="/collections"
-              className="focus-ring hidden min-h-11 items-center rounded-full border border-border/70 bg-background/80 px-5 text-sm font-medium transition hover:border-accent hover:text-accent lg:inline-flex"
-            >
-              Catalogue
-            </Link>
             <Link
               href="/contact"
               className="focus-ring hidden min-h-11 items-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition hover:bg-accent lg:inline-flex"
