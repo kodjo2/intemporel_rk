@@ -17,7 +17,13 @@ export default function Template({ children }: { children: ReactNode }) {
       window.history.scrollRestoration = "manual";
     }
 
-    if (pathname !== "/" || window.location.hash) {
+    if (pathname !== "/") {
+      return;
+    }
+
+    const hash = window.location.hash;
+
+    if (hash && hash !== "#home") {
       return;
     }
 

@@ -5,13 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-const categoryChips = [
-  "Disponibles",
-  "Sur commande",
-  "Series limitees",
-  "Nouveautes",
-];
-
 type HeroSectionProps = {
   children?: ReactNode;
 };
@@ -53,17 +46,6 @@ export function HeroSection({ children }: HeroSectionProps) {
                 >
                   Passer une commande
                 </Link>
-              </div>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                {categoryChips.map((category) => (
-                  <div
-                    key={category}
-                    className="rounded-[1.35rem] border border-border/60 bg-card/80 px-4 py-4 text-sm font-semibold text-foreground shadow-sm"
-                  >
-                    {category}
-                  </div>
-                ))}
               </div>
             </div>
 
