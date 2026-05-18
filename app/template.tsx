@@ -27,7 +27,28 @@ export default function Template({ children }: { children: ReactNode }) {
       return;
     }
 
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    };
+
+    scrollToTop();
+
+    const frameOne = window.requestAnimationFrame(() => {
+      scrollToTop();
+
+      const frameTwo = window.requestAnimationFrame(() => {
+        scrollToTop();
+      });
+
+      return () => window.cancelAnimationFrame(frameTwo);
+    });
+
+    const timeoutId = window.setTimeout(scrollToTop, 160);
+
+    return () => {
+      window.cancelAnimationFrame(frameOne);
+      window.clearTimeout(timeoutId);
+    };
   }, [pathname]);
 
   return (
