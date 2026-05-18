@@ -135,7 +135,7 @@ export function SiteHeader() {
       <div className="border-b border-white/10 bg-[rgba(12,12,12,0.82)] text-white backdrop-blur-xl">
         <div className="container-luxe flex min-h-10 flex-wrap items-center justify-between gap-2 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/74">
           <p>Production sur mesure, vente et series limitees</p>
-          <p>Lome • Atelier non ouvert au public • Livraison sur demande</p>
+          <p>Lome • Livraison sur demande</p>
         </div>
       </div>
       <div className="container-luxe pt-3">
