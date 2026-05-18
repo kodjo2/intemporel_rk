@@ -73,7 +73,7 @@ export default function RootLayout({
           <a href="#main-content" className="skip-link">
             Aller au contenu principal
           </a>
-          <div className="relative flex min-h-screen flex-col overflow-x-clip bg-[radial-gradient(circle_at_top,_rgba(196,163,98,0.14),_transparent_30%),linear-gradient(180deg,_rgba(250,246,239,0.96),_rgba(255,255,255,1))]">
+          <div className="relative flex min-h-screen flex-col overflow-x-clip bg-[radial-gradient(circle_at_top_left,_rgba(196,163,98,0.18),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(17,17,17,0.08),_transparent_24%),linear-gradient(180deg,_rgba(248,242,233,0.98),_rgba(255,252,247,1))]">
             <SiteHeader />
             <main id="main-content" className="flex-1 pt-20 md:pt-24">
               {children}

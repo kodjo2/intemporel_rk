@@ -38,7 +38,7 @@ export function CollectionLookGallery({
     <>
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-          Habits a presenter
+          Apercu de la ligne
         </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {looks.map((look, index) => (
@@ -78,7 +78,7 @@ export function CollectionLookGallery({
               </div>
               <div className="space-y-2 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                  Legende
+                  Detail
                 </p>
                 <p className="text-sm text-muted-foreground">{look.caption}</p>
               </div>
@@ -137,7 +137,7 @@ export function CollectionLookGallery({
                 </div>
                 <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
-                    Legende
+                    Detail
                   </p>
                   <p className="mt-3 text-base text-white/78">
                     {activeLook.caption}

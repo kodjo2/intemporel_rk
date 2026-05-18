@@ -44,7 +44,6 @@ export function SiteHeader() {
 
   useEffect(() => {
     if (pathname !== "/") {
-      setActiveSection("");
       return;
     }
 
@@ -133,13 +132,19 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="container-luxe pt-4">
+      <div className="border-b border-white/10 bg-[rgba(12,12,12,0.82)] text-white backdrop-blur-xl">
+        <div className="container-luxe flex min-h-10 flex-wrap items-center justify-between gap-2 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/74">
+          <p>Production sur mesure, vente et series limitees</p>
+          <p>Lome • Atelier non ouvert au public • Livraison sur demande</p>
+        </div>
+      </div>
+      <div className="container-luxe pt-3">
         <div
           className={cn(
-            "flex min-h-16 items-center justify-between rounded-full px-4 transition-all duration-300 md:px-6",
+            "flex min-h-16 items-center justify-between rounded-[2rem] px-4 transition-all duration-300 md:px-6",
             scrolled
-              ? "glass-panel-strong border border-border/70"
-              : "bg-transparent",
+              ? "glass-panel-strong border border-border/70 shadow-[0_20px_80px_rgba(0,0,0,0.16)]"
+              : "border border-white/10 bg-[rgba(255,248,241,0.78)] shadow-[0_18px_70px_rgba(0,0,0,0.08)] backdrop-blur-xl",
           )}
         >
           <Link
@@ -155,7 +160,7 @@ export function SiteHeader() {
                 {siteConfig.shortName}
               </span>
               <span className="block text-[0.62rem] uppercase tracking-[0.32em] text-muted-foreground">
-                Maison couture
+                Production & vente
               </span>
             </span>
           </Link>
@@ -188,11 +193,20 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <div className="hidden rounded-full border border-border/70 bg-background/80 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground xl:block">
+              Reponse sous 24h
+            </div>
+            <Link
+              href="/collections"
+              className="focus-ring hidden min-h-11 items-center rounded-full border border-border/70 bg-background/80 px-5 text-sm font-medium transition hover:border-accent hover:text-accent lg:inline-flex"
+            >
+              Catalogue
+            </Link>
             <Link
               href="/contact"
               className="focus-ring hidden min-h-11 items-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition hover:bg-accent lg:inline-flex"
             >
-              Prendre rendez-vous
+              Commander
             </Link>
             <button
               type="button"
@@ -242,6 +256,17 @@ export function SiteHeader() {
                     </Link>
                   );
                 })}
+                <Link
+                  href="/contact"
+                  className="focus-ring inline-flex min-h-12 items-center justify-center rounded-2xl bg-primary px-4 py-3 text-base font-medium text-primary-foreground transition hover:bg-accent"
+                  onClick={() => setOpen(false)}
+                >
+                  Commander
+                </Link>
+                <div className="mt-2 rounded-[1.5rem] border border-border/60 bg-background/70 p-4 text-sm text-muted-foreground">
+                  Pieces visibles, demande directe et confirmation avant
+                  production.
+                </div>
               </nav>
             </div>
           </motion.div>

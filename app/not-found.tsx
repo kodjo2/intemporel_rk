@@ -12,7 +12,7 @@ export default function NotFound() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
           {
-            "La page recherchee est introuvable. Revenez a l'accueil, explorez la galerie ou contactez l'atelier pour une orientation rapide."
+            "La page recherchee est introuvable. Revenez a l'accueil, explorez le catalogue ou contactez-nous pour retrouver un modele ou une information utile."
           }
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -26,7 +26,7 @@ export default function NotFound() {
             href="/contact"
             className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full border border-border/70 px-6 text-sm font-semibold transition hover:border-accent hover:text-accent"
           >
-            {"Contacter l'atelier"}
+            {"Nous contacter"}
           </Link>
         </div>
       </div>

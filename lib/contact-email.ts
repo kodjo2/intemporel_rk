@@ -7,10 +7,10 @@ type ContactEmailPayload = {
 };
 
 const serviceLabels: Record<string, string> = {
-  couture: "Couture sur mesure",
-  bridal: "Bridal couture",
-  capsule: "Garde-robe capsule",
-  consulting: "Consulting image",
+  couture: "Production sur mesure",
+  bridal: "Vente de pieces disponibles",
+  capsule: "Series limitees",
+  consulting: "Commande a distance",
 };
 
 export function getContactServiceLabel(service: string) {
@@ -21,7 +21,7 @@ export function buildContactEmail(payload: ContactEmailPayload) {
   const serviceLabel = getContactServiceLabel(payload.service);
 
   return {
-    subject: `Nouvelle demande atelier - ${payload.name}`,
+    subject: `Nouvelle demande client - ${payload.name}`,
     text: [
       "Nouvelle demande via le formulaire INTEMPOREL",
       "",
@@ -77,7 +77,7 @@ export function buildContactAutoReplyEmail(payload: ContactEmailPayload) {
       `Bonjour ${payload.name},`,
       "",
       "Votre demande a bien ete recue par INTEMPOREL.",
-      "Nous revenons vers vous sous 24 heures ouvrables avec une premiere orientation sur le service, le calendrier et le format de rendez-vous le plus adapte.",
+      "Nous revenons vers vous sous 24 heures ouvrables avec une reponse claire sur le modele, la disponibilite ou le delai de production.",
       "",
       "Recapitulatif de votre demande:",
       `- Service: ${serviceLabel}`,
@@ -88,14 +88,14 @@ export function buildContactAutoReplyEmail(payload: ContactEmailPayload) {
       payload.message,
       "",
       "INTEMPOREL",
-      "12 avenue Montaigne, Paris",
+      "Lome, Togo",
     ].join("\n"),
     html: `
       <div style="font-family:Arial,Helvetica,sans-serif;line-height:1.65;color:#101010;background:#f8f4ed;padding:32px;">
         <div style="max-width:720px;margin:0 auto;background:#ffffff;border-radius:24px;padding:32px;border:1px solid rgba(16,16,16,0.08);">
           <p style="margin:0 0 12px;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:#c4a362;font-weight:700;">INTEMPOREL</p>
           <h1 style="margin:0 0 20px;font-size:32px;line-height:1.1;font-weight:700;">Bonjour ${escapeHtml(payload.name)}, votre demande a bien ete recue.</h1>
-          <p style="margin:0 0 14px;">Nous revenons vers vous sous <strong>24 heures ouvrables</strong> avec une premiere orientation sur le service, le calendrier et le format de rendez-vous le plus adapte.</p>
+          <p style="margin:0 0 14px;">Nous revenons vers vous sous <strong>24 heures ouvrables</strong> avec une reponse claire sur le modele, la disponibilite ou le delai de production.</p>
           <div style="margin:24px 0;padding:20px;border-radius:18px;background:#f8f4ed;border:1px solid rgba(16,16,16,0.08);">
             <p style="margin:0 0 10px;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#c4a362;font-weight:700;">Recapitulatif</p>
             <p style="margin:0 0 6px;"><strong>Service:</strong> ${escapeHtml(serviceLabel)}</p>

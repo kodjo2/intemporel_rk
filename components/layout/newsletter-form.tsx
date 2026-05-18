@@ -19,7 +19,7 @@ export function NewsletterForm() {
         className="block text-sm font-medium text-muted-foreground"
         htmlFor="newsletter-email"
       >
-        Newsletter privee
+        Newsletter collection
       </label>
       <div className="flex flex-col gap-3 sm:flex-row">
         <input
@@ -43,8 +43,8 @@ export function NewsletterForm() {
       </div>
       <p className="text-sm text-muted-foreground" role="status">
         {submitted
-          ? "Inscription prise en compte. Vous recevrez les prochaines editions confidentielles."
-          : "Actualites couture, capsules et ouvertures d'agenda. Sans sur-sollicitation."}
+          ? "Inscription prise en compte. Vous recevrez les prochaines sorties et disponibilites."
+          : "Nouveautes, collections, disponibilites et informations utiles. Sans sur-sollicitation."}
       </p>
     </form>
   );

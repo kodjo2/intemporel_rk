@@ -91,10 +91,10 @@ export function ContactForm() {
             {...form.register("service")}
           >
             <option value="">Choisir</option>
-            <option value="couture">Couture sur mesure</option>
-            <option value="bridal">Bridal couture</option>
-            <option value="capsule">Garde-robe capsule</option>
-            <option value="consulting">Consulting image</option>
+            <option value="couture">Production sur mesure</option>
+            <option value="bridal">Vente de pieces disponibles</option>
+            <option value="capsule">Series limitees</option>
+            <option value="consulting">Commande a distance</option>
           </select>
           <span className="text-sm text-destructive">
             {form.formState.errors.service?.message}
@@ -105,7 +105,7 @@ export function ContactForm() {
           Occasion ou temporalite
           <input
             aria-invalid={Boolean(form.formState.errors.occasion)}
-            placeholder="Evenement, capsule, editorial..."
+            placeholder="Modele souhaite, quantite, delai..."
             className="focus-ring min-h-12 rounded-[1.25rem] border border-border/70 bg-background px-4"
             {...form.register("occasion")}
           />
@@ -126,7 +126,7 @@ export function ContactForm() {
           rows={7}
           aria-invalid={Boolean(form.formState.errors.message)}
           className="focus-ring rounded-[1.25rem] border border-border/70 bg-background px-4 py-3"
-          placeholder="Parlez-nous de votre projet, de la date souhaitee, de l'esthetique recherchee et de vos contraintes de calendrier."
+          placeholder="Parlez-nous du modele souhaite, de la taille, de la quantite et du delai vise."
           {...form.register("message")}
         />
         <span className="text-sm text-destructive">
@@ -137,7 +137,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-xl text-sm text-muted-foreground" role="status">
           {status ||
-            "Les demandes sont traitees sous 24 heures ouvrables. Vos donnees restent strictement confidentielles."}
+            "Les demandes sont traitees sous 24 heures ouvrables. Vous recevrez une reponse sur la disponibilite, la production ou la livraison."}
         </p>
         <button
           type="submit"

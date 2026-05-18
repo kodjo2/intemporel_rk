@@ -13,9 +13,9 @@ export function CtaBanner({
   title,
   description,
   primaryHref = "/contact",
-  primaryLabel = "Demander un rendez-vous",
+  primaryLabel = "Passer une commande",
   secondaryHref = "/services",
-  secondaryLabel = "Explorer les services",
+  secondaryLabel = "Voir les options",
 }: CtaBannerProps) {
   return (
     <section className="container-luxe py-12 md:py-16">
@@ -24,7 +24,7 @@ export function CtaBanner({
         <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div className="space-y-4">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent">
-              Experience privee
+              Production & vente
             </p>
             <h2 className="max-w-3xl text-balance text-4xl font-semibold sm:text-5xl lg:text-6xl">
               {title}

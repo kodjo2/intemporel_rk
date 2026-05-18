@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "INTEMPOREL",
   shortName: "INTEMPOREL",
   description:
-    "Maison de mode et couture haut de gamme. Pieces sur mesure, silhouettes signatures et experiences privees pour une clientele exigeante.",
+    "Production sur mesure et vente de pieces feminines. Collections, series limitees et commandes selectionnees, sans atelier ouvert au public.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://romarice-couture.vercel.app",
   ogImage: "/images/hero-couture.jpeg",
@@ -29,7 +29,7 @@ export const siteConfig = {
     email: "intemporel.rk@gmail.com",
     phone: "+228 70049090",
     address: "Lome, Togo",
-    hours: "Lun - Sam, 10h00 - 19h30",
+    hours: "Lun - Sam, 10h00 - 19h30, commande et retrait sur contact",
   },
   socialLinks: [
     { label: "Instagram", href: "https://instagram.com" },

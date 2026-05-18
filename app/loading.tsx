@@ -7,7 +7,7 @@ export default function Loading() {
           INTEMPOREL
         </p>
         <h1 className="mt-4 font-heading text-4xl">
-          {"Chargement de l'experience couture"}
+          {"Chargement du catalogue"}
         </h1>
         <div className="mt-6 grid gap-3">
           <div className="h-3 rounded-full bg-muted/80" />
