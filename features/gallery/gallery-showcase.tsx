@@ -91,23 +91,16 @@ export function GalleryShowcase({
             }}
             onClick={() => setActiveItem(item)}
           >
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src={item.image}
-                alt={item.alt}
-                fill
-                className="object-cover transition duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 25vw"
-              />
-            </div>
-            <div className="space-y-2 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
-                {item.category}
-              </p>
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-xs text-muted-foreground sm:text-sm">
-                {item.description}
-              </p>
+            <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-background/40 p-3">
+              <div className="relative h-full w-full overflow-hidden rounded-[1.2rem]">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 92vw, (max-width: 1280px) 30vw, 23vw"
+                />
+              </div>
             </div>
           </motion.button>
         ))}

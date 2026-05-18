@@ -2,10 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { HeroSection } from "@/components/home/hero-section";
-import { StatsGrid } from "@/components/home/stats-grid";
 import { TestimonialsCarousel } from "@/components/home/testimonials-carousel";
 import { AnimatedSection } from "@/components/shared/animated-section";
-import { CtaBanner } from "@/components/shared/cta-banner";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { StructuredData } from "@/components/shared/structured-data";
 import { GalleryShowcase } from "@/features/gallery/gallery-showcase";
@@ -427,21 +425,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-luxe py-12 md:py-20">
-        <SectionHeading
-          eyebrow="Impact mesurable"
-          title="Des chiffres qui rassurent sur le volume, les delais et la livraison."
-          description="Ils servent de preuve simple pour un site de vente et de production: experience, fiabilite et capacite a traiter les commandes."
-        />
-        <div className="mt-10">
-          <StatsGrid items={stats} />
-        </div>
-      </section>
-
-      <CtaBanner
-        title="Commander une piece, verifier une disponibilite ou lancer une production sur mesure."
-        description="INTEMPOREL traite les demandes de production et de vente directement par contact, avec validation du modele, du delai et de la livraison avant confirmation."
-      />
     </>
   );
 }
