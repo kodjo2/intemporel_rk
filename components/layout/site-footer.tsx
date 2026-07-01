@@ -35,10 +35,10 @@ export function SiteFooter() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/payment"
               className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full bg-[#f4d28b] px-6 text-sm font-semibold text-zinc-950 transition hover:bg-white"
             >
-              Passer une commande
+              Payer une commande
             </Link>
           </div>
 

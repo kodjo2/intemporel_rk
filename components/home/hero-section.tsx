@@ -41,10 +41,10 @@ export function HeroSection({ children }: HeroSectionProps) {
                   <ArrowRight className="size-4" />
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/payment"
                   className="focus-ring inline-flex min-h-12 items-center justify-center rounded-full border border-[#c69a44]/35 bg-[#f4d28b] px-6 text-sm font-semibold text-[#1b1610] shadow-[0_14px_35px_rgba(198,154,68,0.18)] transition hover:bg-[#e8c373]"
                 >
-                  Passer une commande
+                  Payer un acompte
                 </Link>
               </div>
             </div>
@@ -69,10 +69,10 @@ export function HeroSection({ children }: HeroSectionProps) {
                     Modele visible, delai confirme avant commande.
                   </p>
                   <Link
-                    href="/contact"
+                    href="/payment"
                     className="focus-ring mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-[#f4d28b] px-5 text-sm font-semibold text-[#1b1610] transition hover:bg-[#e5c06f]"
                   >
-                    Commander cette piece
+                    Regler cette piece
                   </Link>
                 </div>
               </div>

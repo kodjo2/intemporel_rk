@@ -18,6 +18,7 @@ export const siteConfig = {
       sectionId: "collections",
     },
     { href: "/#services", label: "Services", sectionId: "services" },
+    { href: "/payment", label: "Paiement" },
     {
       href: "/#testimonials",
       label: "Temoignages",

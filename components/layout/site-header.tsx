@@ -194,10 +194,10 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <Link
-              href="/contact"
+              href="/payment"
               className="focus-ring hidden min-h-11 items-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition hover:bg-accent lg:inline-flex"
             >
-              Commander
+              Payer
             </Link>
             <button
               type="button"
@@ -248,11 +248,11 @@ export function SiteHeader() {
                   );
                 })}
                 <Link
-                  href="/contact"
+                  href="/payment"
                   className="focus-ring inline-flex min-h-12 items-center justify-center rounded-2xl bg-primary px-4 py-3 text-base font-medium text-primary-foreground transition hover:bg-accent"
                   onClick={() => setOpen(false)}
                 >
-                  Commander
+                  Payer maintenant
                 </Link>
                 <div className="mt-2 rounded-[1.5rem] border border-border/60 bg-background/70 p-4 text-sm text-muted-foreground">
                   Pieces visibles, demande directe et confirmation avant
